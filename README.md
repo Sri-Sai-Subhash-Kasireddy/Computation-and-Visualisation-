@@ -7,6 +7,6 @@
  1. Open the .rmd or .R files in R-Studio to view and execute them and .twbx or .twb in Tableau.
  2. Incase you dont have the IDE's here the link:
  
-     R-Studio: ![](https://www.rstudio.com/products/rstudio/download/)
+     ![Download R-Studio](https://www.rstudio.com/products/rstudio/download/)
      
-     Tableau: ![](https://www.tableau.com/trial/download-tableau?utm_campaign_id=2017049&utm_campaign=Prospecting-CORE-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=USCA&kw=tableau%20download&adgroup=CTX-Brand-Download-E&adused=RESP&matchtype=e&placement=&gclsrc=aw.ds&gclid=CjwKCAjwj8eJBhA5EiwAg3z0m2TeKD9MMJkvcobbLrKHRqQHPCithDKcJ69xqbBwARgCIdNozxpygxoCyCsQAvD_BwE)
+     ![Download Tableau](https://www.tableau.com/trial/download-tableau?utm_campaign_id=2017049&utm_campaign=Prospecting-CORE-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=USCA&kw=tableau%20download&adgroup=CTX-Brand-Download-E&adused=RESP&matchtype=e&placement=&gclsrc=aw.ds&gclid=CjwKCAjwj8eJBhA5EiwAg3z0m2TeKD9MMJkvcobbLrKHRqQHPCithDKcJ69xqbBwARgCIdNozxpygxoCyCsQAvD_BwE)
