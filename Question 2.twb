@@ -1,0 +1,1664 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0114.0916                               -->
+<workbook original-version='18.1' source-build='2020.4.1 (20204.21.0114.0916)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Average Salary' inline='true' name='federated.1waitv31safefz1ea81v608t1arl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Average Salary' name='textscan.0h47bom1heken41gaww230dy2zr0'>
+            <connection class='textscan' directory='C:/Users/kasir/Desktop/C&amp;V/Assignments/Assignment 2' filename='Average Salary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0h47bom1heken41gaww230dy2zr0' name='Average Salary.csv' table='[Average Salary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='ID Industry Group' ordinal='0' />
+            <column datatype='string' name='Industry Group' ordinal='1' />
+            <column datatype='integer' name='ID Year' ordinal='2' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='3' />
+            <column datatype='boolean' name='ID Workforce Status' ordinal='4' />
+            <column datatype='boolean' name='Workforce Status' ordinal='5' />
+            <column datatype='real' name='Average Wage' ordinal='6' />
+            <column datatype='real' name='Average Wage Appx MOE' ordinal='7' />
+            <column datatype='integer' name='Record Count' ordinal='8' />
+            <column datatype='string' name='Slug Industry Group' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0h47bom1heken41gaww230dy2zr0' name='Average Salary.csv' table='[Average Salary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='ID Industry Group' ordinal='0' />
+            <column datatype='string' name='Industry Group' ordinal='1' />
+            <column datatype='integer' name='ID Year' ordinal='2' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='3' />
+            <column datatype='boolean' name='ID Workforce Status' ordinal='4' />
+            <column datatype='boolean' name='Workforce Status' ordinal='5' />
+            <column datatype='real' name='Average Wage' ordinal='6' />
+            <column datatype='real' name='Average Wage Appx MOE' ordinal='7' />
+            <column datatype='integer' name='Record Count' ordinal='8' />
+            <column datatype='string' name='Slug Industry Group' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID Industry Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID Industry Group]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>ID Industry Group</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Industry Group]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Industry Group</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID Year]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>ID Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID Workforce Status</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ID Workforce Status]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>ID Workforce Status</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Workforce Status</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Workforce Status]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Workforce Status</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Wage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average Wage]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Average Wage</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Wage Appx MOE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average Wage Appx MOE]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Average Wage Appx MOE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Record Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Record Count]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Record Count</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Slug Industry Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Slug Industry Group]</local-name>
+            <parent-name>[Average Salary.csv]</parent-name>
+            <remote-alias>Slug Industry Group</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[ID Year]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Industry Group (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Industry Group]' default='&quot;Military Reserves or National Guard&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Other&quot;'>
+            <value>&quot;U. S Coast Guard&quot;</value>
+            <value>&quot;U. S. Air Force&quot;</value>
+            <value>&quot;U. S. Army&quot;</value>
+            <value>&quot;U. S. Marines&quot;</value>
+            <value>&quot;U. S. Navy&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Industry Group]' role='dimension' type='nominal' />
+      <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Average Salary.csv' datatype='table' name='[__tableau_internal_object_id__].[Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7]' role='measure' type='quantitative' />
+      <column-instance column='[Industry Group]' derivation='None' name='[none:Industry Group:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Industry Group:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Aerospace products &amp; parts manufacturing&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Book stores &amp; news dealers&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Commercial &amp; service industry machinery manufacturing&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Electric power generation, transmission &amp; distribution&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Funeral homes, &amp; cemeteries &amp; crematories &quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Insurance carriers&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Management, scientific &amp; technical consulting services&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Musical instrument &amp; supplies stores&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Offices of other health practitioners&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Periodical, book, &amp; directory publishers&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Real estate property managers, offices of real estate appraisers, and other activities related to real estate&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ship &amp; boat building&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Tobacco manufacturing&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Wired telecommunications carriers&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Automotive parts, accessories, &amp; tire stores  &quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Child day care services&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Dairy product manufacturing&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Farming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Health &amp; personal care, except drug, stores &quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lessors of real estate, and offices of real estate agents and brokers&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Military Reserves or National Guard&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Miscellaneous paper &amp; pulp products&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Not specified retail trade&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Other professional, scientific &amp; technical services &quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Private households&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Scenic &amp; sightseeing transportation&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Supermarkets and Other Grocery (except Convenience) Stores&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Veneer, plywood, &amp; engineered wood products &quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Barber shops&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Coal mining&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Drugs, sundries, &amp; chemical &amp; allied products merchant  wholesalers &quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Forestry except logging&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Household appliances &amp; electrical &amp; electronic goods merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Machine shops; turned product; screw, nut &amp; bolt manufacturing  &quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Motion pictures &amp; video industries&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Office supplies &amp; stationery stores&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Paint, coating, &amp; adhesive manufacturing &quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Public finance activities&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Services incidental to transportation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Telecommunications, except wired telecommunications carriers &quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;U. S. Marines&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Waste management &amp; remediation services&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;U. S. Army&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Agricultural implement manufacturing&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bus service &amp; urban transit&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Computer &amp; peripheral equipment manufacturing&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Electronics stores&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Gasoline stations&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Jewelry, luggage, &amp; leather goods stores &quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Metals &amp; minerals (except petroleum) merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Navigational, measuring, electromedical, &amp; control instruments manufacturing&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Other administrative &amp; other support services&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Pharmaceutical &amp; medicine manufacturing&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Residential care facilities, except skilled nursing facilities&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sound recording industries&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Used merchandise stores&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Agencies, brokerages, and other insurance related activities&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bowling centers&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Commercial, industrial &amp; other intangible assets rental &amp; leasing&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Electronic &amp; precision equipment repair and maintenance&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Furniture &amp; home furnishing merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Internet publishing, broadcasting &amp; web search portals&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Medical equipment &amp; supplies manufacturing&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Nail salons &amp; other personal care services&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Offices of physicians&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Personal &amp; household goods repair &amp; maintenance&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Recreational vehicle parks &amp; camps and rooming &amp; boarding houses&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Shoe stores&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Travel arrangements &amp; reservation services&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Administration of environmental quality &amp; housing programs&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Beauty salons&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Coating, engraving, heat treating &amp; allied activities &quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Drycleaning &amp; laundry services&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Foundries&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Independent artists, writers, and performers&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Machinery manufacturing, n.e.c. or not specified&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Motor vehicle &amp; motor vehicle parts &amp; supplies merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Offices of chiropractors&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Paper &amp; paper products merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pulp, paper, &amp; paperboard mills &quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Services to buildings &amp; dwellings (except cleaning during construction &amp; immediately after construction)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Textile &amp; fabric finishing &amp; coating mills&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Water transportation&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Architectural, engineering &amp; related services&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Carpet &amp; rug mills&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Cut and sew, and apparel accessories and other apparel manufacturing&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Farm product raw material merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hardware stores&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Leather tanning &amp; finishing, &amp; other allied products manufacturing &quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Miscellaneous nondurable goods merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Not specified manufacturing industries&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Other motor vehicle dealers&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Prefabricated wood buildings &amp; mobile homes&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Savings institutions, including credit unions &quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Structural metals, &amp; boiler, tank, &amp; shipping container manufacturing &quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Accounting, tax preparation, bookkeeping &amp; payroll services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Automotive repair &amp; maintenance&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Civic, social, advocacy organizations, &amp; grantmaking &amp; giving services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Data processing, hosting &amp; related services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Fiber, yarn, &amp; thread mills&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Home health care services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Libraries &amp; archives&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Miscellaneous petroleum &amp; coal products&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Not specified utilities&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Other schools &amp; instruction and educational support services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Professional &amp; commercial equipment &amp; supplies merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Scientific research &amp; development services&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Support activities for agriculture &amp; forestry&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Veterinary services&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Aluminum production &amp; processing&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Animal slaughtering &amp; processing&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Car Dealers&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Convenience Stores&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Executive offices &amp; legislative bodies&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Glass &amp; glass product manufacturing&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Landscaping services&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Miscellaneous fabricated metal products manufacturing&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Nonmetallic mineral mining &amp; quarrying&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Other health care services&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Postal Service&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Retail florists&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Sporting &amp; athletic goods, &amp; doll, toy &amp; game manufacturing  &quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Administration of human resource programs&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Beer, wine, &amp; liquor stores &quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Colleges, universities &amp; professional schools, including junior colleges&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Electric &amp; gas, and other combinations&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fruit &amp; vegetable preserving &amp; specialty food manufacturing&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Individual &amp; family services&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Machinery, equipment, &amp; supplies merchant wholesalers     &quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Motor vehicles &amp; motor vehicle equipment manufacturing&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Offices of dentists&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Paperboard container manufacturing&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Rail transportation&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sewage treatment facilities&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Textile product mills, except carpets &amp; rugs &quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Water, steam, air-conditioning, &amp; irrigation systems&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Air transportation&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Business support services&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Computer Systems Design&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Elementary &amp; secondary schools&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;General medical and surgical hospitals, and specialty (except psychiatric and substance abuse) hospitals&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Justice, public order, &amp; safety activities &quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Metalworking machinery manufacturing&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Newspaper publishers&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other consumer goods rental&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pharmacies &amp; drug stores&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Resin, synthetic rubber, &amp; fibers &amp; filaments manufacturing   &quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Specialized design services&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Vending machine operators&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Aircraft &amp; parts manufacturing&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Animal food, grain &amp; oilseed milling&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Business, professional, political, &amp; similar organizations&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Construction&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Employment services&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;General merchandise stores, including warehouse clubs and supercenters&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Knitting fabric mills, &amp; apparel knitting mills &quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Nondepository credit &amp; related activities&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Other direct selling establishments&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pipeline transportation&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Restaurants &amp; Food Services&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Specialty food stores&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;U. S. Armed Forces: Branch Not Specified&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Amusement &amp; Recreation&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Apparel, piece goods, &amp; notions merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Car washes&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Couriers &amp; messengers&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fabric mills, except knitting mills&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Grocery &amp; related product merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Lawn &amp; garden equipment &amp; supplies stores&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Miscellaneous manufacturing, n.e.c.  &quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Not specified food industries, manufacturing&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Other information services, except libraries &amp; archives, &amp; internet publishing &amp; broadcasting &amp; web search portals&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pottery, ceramics, &amp; plumbing fixture manufacturing  &quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Rubber products, except tires, manufacturing &quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sporting goods, and hobby &amp; toy stores &quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Automotive equipment rental &amp; leasing&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Cement, concrete, lime, &amp; gypsum product manufacturing &quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Cutlery &amp; hand tool manufacturing&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Farm supplies merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Hardware, &amp; plumbing &amp; heating equipment, &amp; supplies merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Legal services&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Miscellaneous nonmetallic mineral product manufacturing&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Not specified metal industries&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Other personal services&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Printing &amp; related support activities&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Sawmills &amp; wood preservation&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Sugar &amp; confectionery products&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Broadcasting (except internet)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Communications, &amp; audio &amp; video equipment manufacturing&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Electronic component &amp; product manufacturing, n.e.c. &quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Furniture &amp; home furnishings stores&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Investigation &amp; security services&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Metal forgings &amp; stampings&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;National security &amp; international affairs&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Oil &amp; gas extraction&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Petroleum &amp; petroleum products merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Recyclable material merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Soap, cleaning compound, &amp; cosmetics manufacturing &quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Traveler accommodation&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;U. S. Air Force&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;U. S. Navy&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Advertising, public relations &amp; related services&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Beverage manufacturing&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Commercial &amp; industrial machinery &amp; equipment repair &amp; maintenance&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Electric lighting &amp; electrical equipment manufacturing, &amp; other electrical component manufacturing, n.e.c.&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Fuel dealers&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Industrial &amp; miscellaneous chemicals&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Management of companies &amp; enterprises&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Museums, art galleries, historical sites, &amp; similar institutions&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Offices of optometrists&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Performing arts companies&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Railroad rolling stock manufacturing&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sewing, needlework, &amp; piece goods stores &quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Tire manufacturing&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Wholesale electronic markets &amp; agents &amp; brokers&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bakeries &amp; tortilla manufacturing, except retail bakeries&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Clay building material &amp; refractories manufacturing&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Department stores&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fishing, hunting &amp; trapping&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Household appliance manufacturing&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Logging&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Miscellaneous retail stores&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Not specified wholesale trade&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Other transportation equipment manufacturing&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Promoters of performing arts, sports, and similar events, agents and managers for artists, athletes, entertainers, and other public figures&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Seafood &amp; other miscellaneous foods, n.e.c. &quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Support activities for mining&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;U. S Coast Guard&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Vocational rehabilitation services&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Alcoholic beverages merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Animal production &amp; aquaculture&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Business, technical &amp; trade schools and training&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Construction, &amp; mining &amp; oil &amp; gas field machinery manufacturing &quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Engine, turbine, &amp; power transmission equipment manufacturing &quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gift, novelty, &amp; souvenir shops&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Labor unions&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Miscellaneous durable goods merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Nonferrous metal (except aluminum) production &amp; processing&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Other general government &amp; support&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Plastics product manufacturing&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Retail bakeries&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Spectator sports&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Agricultural chemical manufacturing&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Building material &amp; supplies dealers&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Community food &amp; housing, &amp; emergency services &quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Electronic shopping and mail-order houses&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Furniture &amp; related product manufacturing&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Iron &amp; steel mills &amp; steel product manufacturing&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Metal ore mining&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Natural gas distribution&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ordnance&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Petroleum refining&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Religious organizations&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Software publishing&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Truck transportation&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Administration of economic programs &amp; space research&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Banking &amp; related activities&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Clothing stores&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Drinking places, alcoholic beverages &quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Footwear manufacturing&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Household appliance stores&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Lumber &amp; other construction materials merchant wholesalers&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Miscellaneous wood products&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Nursing Care Facilities&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Outpatient care centers&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Psychiatric and substance abuse hospitals&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Securities, commodities, funds, trusts &amp; other financial investments&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Taxi &amp; limousine service&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Warehousing &amp; storage&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Industry Group (group)]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Military Reserves or National Guard&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Average Salary.csv' id='Average Salary.csv_ACC6AF3C3741431EA3C15F01A129C9D7'>
+            <properties context=''>
+              <relation connection='textscan.0h47bom1heken41gaww230dy2zr0' name='Average Salary.csv' table='[Average Salary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='ID Industry Group' ordinal='0' />
+                  <column datatype='string' name='Industry Group' ordinal='1' />
+                  <column datatype='integer' name='ID Year' ordinal='2' />
+                  <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='3' />
+                  <column datatype='boolean' name='ID Workforce Status' ordinal='4' />
+                  <column datatype='boolean' name='Workforce Status' ordinal='5' />
+                  <column datatype='real' name='Average Wage' ordinal='6' />
+                  <column datatype='real' name='Average Wage Appx MOE' ordinal='7' />
+                  <column datatype='integer' name='Record Count' ordinal='8' />
+                  <column datatype='string' name='Slug Industry Group' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Question 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Average Salary' name='federated.1waitv31safefz1ea81v608t1arl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1waitv31safefz1ea81v608t1arl'>
+            <column datatype='real' name='[Average Wage]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Industry Group (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Industry Group]' default='&quot;Military Reserves or National Guard&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Other&quot;'>
+                  <value>&quot;U. S Coast Guard&quot;</value>
+                  <value>&quot;U. S. Air Force&quot;</value>
+                  <value>&quot;U. S. Army&quot;</value>
+                  <value>&quot;U. S. Marines&quot;</value>
+                  <value>&quot;U. S. Navy&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Industry Group]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Industry Group]' derivation='None' name='[none:Industry Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Average Wage]' derivation='Sum' name='[sum:Average Wage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;Military Reserves or National Guard&quot;' />
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;U. S Coast Guard&quot;' />
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;U. S. Air Force&quot;' />
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;U. S. Army&quot;' />
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;U. S. Marines&quot;' />
+              <groupfilter function='member' level='[none:Industry Group:nk]' member='&quot;U. S. Navy&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1waitv31safefz1ea81v608t1arl].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1waitv31safefz1ea81v608t1arl].[sum:Average Wage:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]</column>
+            <column>[federated.1waitv31safefz1ea81v608t1arl].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]' value='84' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1waitv31safefz1ea81v608t1arl].[Industry Group (group)]' />
+              <lod column='[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1waitv31safefz1ea81v608t1arl].[sum:Average Wage:qk]</rows>
+        <cols>[federated.1waitv31safefz1ea81v608t1arl].[none:Industry Group:nk]</cols>
+      </table>
+      <simple-id uuid='{161EF724-5A86-4E59-99CC-88F5318A7F71}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='0.833333' source-height='30'>
+    <window class='worksheet' maximized='true' name='Question 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1waitv31safefz1ea81v608t1arl].[Industry Group (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1waitv31safefz1ea81v608t1arl].[Industry Group (group)]</field>
+            <field>[federated.1waitv31safefz1ea81v608t1arl].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3CC2AB78-7706-4E4E-A915-BF88084AA4E0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='576' name='Question 2' width='576'>
+      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
+      RWre6yp1b9VIhuFQ13795Sgr0NIlS7Rp12H1uOZmXdEsWluO2jTs2oFKiHYoObOJ0qIqtGLZ
+      Um3cvl95nfrrO+NHaef65Wrc6Sr1bN1ICWlZykp1a/uGVfpq0WJt3HFALboN0i9+8X3lJEfL
+      kGRzJ6lbp5Y6uGuTFi5aom17CtW531XKTY3TlhXztccTrWsGX634aubpxKY21OqZ78qX2VUP
+      jx+luKiaT2TYHG51v/IadchLUcHOTVq4eKnWbdgirz1J1910u+4cPVgJ0VGSQtq0bL4O+ON0
+      zdUDVfWgkqHsVt3VvWW6tq1dqgWLlupQuUOj7n5EP7h7hKJPTEBKzGmpBirS8uXLtXHHATVu
+      11fffWiMNs9fpia9Bqh7q2yZAZ9mfDBZpfZMxZoHNe/LxSoOxWrk+If0/TtHKNrJSZlwMkzz
+      G85KAwAgwioKt+n+2+9U/qif61d3Db6k5nEEPcV67J4bdKTBCP3rye/qUn26Wn3BKTAAwMUv
+      UK4FXy3UjLcnarctT49d0/uSih9cfAggAMDFz1+kv/z5fxWMz9fPfvNjtcmMj/SIcInjFBgA
+      4OJnmgqGQpJhyGbY9A3mL190TNOUGQrJNAzZbLZvfc8lfDsEEAAAsBxOoQIAAMshgMLANE35
+      /X6FQt/sbqQAAKBuEUBh4vf7xdlGAAAuDgQQAACwHAIIAABYDgEEAAAshwACAACWQwABAADL
+      IYAAAIDlEEAAAMByCCAAAGA5BBAAALAcAggAAFgOAQQAACyHAAIAAJZDAAEAAMshgAAAgOUQ
+      QAAAwHIIIAAAYDkEEAAAsBwCCAAAWA4BBAAALIcAAgAAlkMAAQAAy3FEegA4u9LiY9q7a0ek
+      h1Gv5DZprpi4uEgPAwAQQQTQRc5TUaG9O7ZHehj1SsOsRgQQAFgcp8AAAIDlEEAAAMBy6uUp
+      sEClV2XlHpmnvW53upQQF3PqBdNUwO9TeYVXpmFTTGysnA67jK99xltRppDNpRi384xtlPsC
+      io+Llc0wBAAALh31MoC2LvlY/3l/qZKS46rETGKTrnrg5qtP/nPhnnWaPOUjHasISgopOjVX
+      N908UtnJpyJp3rsv6nDGFRo7sOPJ10JBn2ZNnagtaqZ7bxwomz0MPxQAAKg19TKAjhw8oC5D
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

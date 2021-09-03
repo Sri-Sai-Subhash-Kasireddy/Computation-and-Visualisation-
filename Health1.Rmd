@@ -1,0 +1,287 @@
+---
+title: "Health1"
+output:
+  word_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(treemap)
+library(gplots)
+library(lubridate)
+library(hexbin)
+library(plotly)
+library(scales)
+```
+
+
+```{r}
+Sys.setenv("plotly_username"="Subhash2908")
+Sys.setenv("plotly_api_key"="tRBGlwdrraCnyaPwOYpq")
+```
+
+
+```{r}
+hlt=read_csv("NH_ProviderInfo_Feb2021.csv")
+state=read_csv("State.csv")
+pen=read_csv("NH_Penalties_Feb2021.csv")
+def=read_csv("Health_Deficiencies.csv")
+```
+
+
+```{r}
+colnames(state)=c("State", "Provider State")
+
+hlt=inner_join(hlt, state, by.x=`Provider State`)
+
+hlt$`Rating Cycle 1 Total Health Score`=as.numeric(hlt$`Rating Cycle 1 Total Health Score`)
+hlt$`Rating Cycle 2 Total Health Score`=as.numeric(hlt$`Rating Cycle 2 Total Health Score`)
+hlt$`Rating Cycle 3 Total Health Score`=as.numeric(hlt$`Rating Cycle 3 Total Health Score`)
+#Merge Penalties
+hlt$FPM=as.numeric(hlt$FPM)
+
+
+
+def1=inner_join(hlt, def, by.x=`Provider Name`)
+
+pen1=inner_join(def1, pen, by.x=FPM)
+
+def1=unique(def1)
+pen1=unique(pen1)
+
+rm(def, hlt, pen)
+
+
+
+
+font=list(size=12,
+          color="white")
+
+label=list(bgcolor="#232F34",
+           bordercolor="transparent",
+           font=font)
+```
+
+
+```{r}
+#No. of health providers in each State.
+hlt_prov=def1 %>% 
+  select(`Provider State`, `Provider Name`) 
+
+hlt_prov=unique(hlt_prov)
+
+hlt_prov=hlt_prov %>% 
+  group_by(`Provider State`) %>% 
+  summarise(Count=n()) 
+  
+ggplot(data=hlt_prov, aes(x=reorder(`Provider State`, Count), y=Count, fill=Count))+
+  geom_bar(stat="identity", color="black")+scale_colour_brewer()+theme(legend.position = "none")+
+  xlab("State")+ylab("No. of Providers")+ggtitle("Health Providers in each State")+coord_flip()
+
+ggsave("HP in States.jpeg")
+```
+
+
+```{r}
+st_def=def1 %>%
+  select(`Provider State`, `Deficiency Category`) %>% 
+  group_by(`Provider State`) %>% 
+  summarise(Count=n())
+  
+
+# treemap(dtf=st_def, index=c("Provider State"), vSize=c("Count"), title ="Deficiencies in each State",
+#         border.col = "black", border.lwds = c(1.7),
+#         fontface.labels = 1, fontsize.labels = 11, fontfamily.labels = "sans",
+#         type = "index")
+
+z=plot_ly(data=st_def, type="treemap",  parents="Number of cases in each State" , labels=~`Provider State`, values=~Count)
+
+api_create(z, "Treemap for Cases")
+
+rm(z)
+```
+
+
+```{r}
+#Cases per Category
+def1 %>% 
+  select(`Deficiency Category`) %>% 
+  group_by(`Deficiency Category`) %>% 
+  summarise(Count=n()) %>% 
+  ggplot(aes(x=reorder(`Deficiency Category`,Count), y=Count,  fill=Count, show.legend=F))+geom_bar(stat="identity")+coord_flip()+
+  xlab("Deficiency Category")+ylab("Cases")+ggtitle("Number of cases for each Category")+theme(legend.position = "none")
+```
+
+
+```{r}
+#States and their cases.
+x=def1 %>% 
+  select(`Provider State`, `Deficiency Category`) %>% 
+  group_by(`Provider State`, `Deficiency Category`) %>% 
+  summarise(Cases=n()) %>% 
+  drop_na()
+
+  z=ggplotly(ggplot(x,aes(x=`Provider State`, y=Cases, fill=`Deficiency Category`))+geom_bar(stat = "identity", color="black")+coord_flip()+xlab("States")+ylab("Cases")+ggtitle("Deficiency Cases in each State(Category Wise)")+scale_fill_brewer(palette="Paired"),tooltip=c("Count"))%>% 
+    style(hoverlabel= label) %>% 
+    layout(font=font) %>% 
+    config(displayModeBar=F)
+
+
+api_create(z, "Stacked Bar plot for Deficiency Cases in each State(Category Wise)")
+  
+  rm(x)
+```
+
+
+```{r}
+def1$`Survey 1 Year`=substring(def1$`Survey 1 Date`,7,10)
+def1$`Survey 2 Year`=substring(def1$`Survey 2 Date`,7,10)
+def1$`Survey 3 Year`=substring(def1$`Survey 3 Date`,7,10)
+def1$`Start Year`=substring(def1$`Start Date`, 7, 10)
+
+
+#Providers Start Year
+x=def1 %>% 
+  group_by(`Start Year`) %>% 
+  summarise(Count=n())
+
+
+c=x$Count
+
+z=ggplotly(ggplot(x,aes(x=`Start Year` , y=Count, fill=c))+geom_bar(stat="identity", color="black")+theme(legend.position = "none")+xlab("Years")+ylab("Providers")+ggtitle("Providers Start Year")+coord_flip(),tooltip=c("Count"))%>% 
+    style(hoverlabel= label) %>% 
+    layout(font=font) %>% 
+    config(displayModeBar=F)
+api_create(z, "Bar Plot for Providers Start Year")
+
+rm(x,c,z)
+```
+
+
+```{r}
+#Treemap of different Organizations and their numbers.
+ot=def1 %>% 
+  group_by(`Ownership Type`) %>% 
+  summarise(Count=n())
+  
+treemap(ot, index=c("Ownership Type"), vSize=c("Count"), title = "Organizations and their Count")
+```
+
+
+```{r}
+#Relationship between No. of beds and Avg. residents per day
+x=def1 %>% 
+  select(State, `Number of Certified Beds`, `Average Number of Residents per Day`) %>% 
+  drop_na() %>% 
+  group_by(`State`) 
+
+  ggplot(x,aes(x=`Number of Certified Beds`, y=`Average Number of Residents per Day`))+geom_hex(alpha=0.9, color="black")+labs(fill="Providers")+scale_fill_gradient(low="lightblue1",high="darkblue",trans="log10")+
+  ggtitle("Relation between number of beds and Avg. number of residents per day")
+  
+  rm(x)
+```
+
+
+```{r}
+#State that pays the highest penalties
+x=pen1 %>% 
+  select(State, `Fine Amount`, `Penalty Type`) %>% 
+  filter(`Penalty Type`=="Fine") %>% 
+  drop_na() %>% 
+  group_by(State) %>% 
+  summarise(Avg=mean(`Fine Amount`))
+
+c=x$Avg
+
+  z=ggplotly(ggplot(x,aes(x=State, y=Avg, fill=c))+geom_bar(stat="identity", color="black")+theme(legend.position = "none")+xlab("Years")+ylab("Fine")+ggtitle("Fines in each State")+coord_flip(), tooltip=c("Avg")) %>% 
+    style(hoverlabel= label) %>% 
+    layout(font=font) %>% 
+    config(displayModeBar=F)
+  
+  api_create(z, "Avg. Fines in each State")
+  
+   rm(x,c,z)
+```
+
+
+```{r}
+#Ownership Types
+x=pen1 %>% 
+  select(`Ownership Type`, `Fine Amount`, `Penalty Type`) %>% 
+  filter(`Penalty Type`=="Fine") %>% 
+  drop_na() %>% 
+  group_by(`Ownership Type`) %>% 
+  summarise(`Total Fine`=sum(`Fine Amount`))
+
+
+  ggplot(x,aes(x=`Ownership Type`, y=`Total Fine`))+geom_bar(stat="identity")+coord_flip()+theme_minimal()+scale_y_continuous(labels = comma)
+  
+  
+```
+
+
+```{r}
+#Rating compared among different states for different cycles.
+x=def1 %>% 
+  select(State, `Rating Cycle 1 Total Health Score`, `Rating Cycle 2 Total Health Score`, `Rating Cycle 3 Total Health Score`) %>% 
+  group_by(State) %>% 
+  drop_na() %>% 
+  summarise(`Cycle 1`=mean(`Rating Cycle 1 Total Health Score`), `Cycle 2`=mean(`Rating Cycle 2 Total Health Score`), `Cycle 3`=mean(`Rating Cycle 3 Total Health Score`)) %>% 
+  pivot_longer(cols=2:4, names_to= "AVG", values_to="Score") 
+
+
+
+  z=ggplotly(ggplot(x,aes(State, Score, fill=AVG))+geom_bar(stat="identity", color="black")+facet_wrap(~AVG, ncol=3)+coord_flip()+ylab("Avg. Rating Score")+ggtitle("Change in Total Rating Score over Different Cycle's")+
+  labs(fill="Cycle"), tooltip=c("State", "Score")) %>% 
+    style(hoverlabel= label) %>% 
+    layout(font=font) %>% 
+    config(displayModeBar=F)
+  
+  api_create(z, "Change in Rating Score")
+rm(x,z)
+  
+```
+
+
+```{r}
+#Deficiencies based on Inspection Cycle
+def1 %>% 
+  select(`Ownership Type`, `Most Recent Health Inspection More Than 2 Years Ago`) %>% 
+  filter(`Most Recent Health Inspection More Than 2 Years Ago`=="Y") %>% 
+  group_by(`Ownership Type`) %>% 
+  summarise(Count=n()) %>% 
+  ggplot(aes(x=`Ownership Type`, y=Count))+geom_bar(stat="identity")+coord_flip()+ylab("Providers Inspected More Than 2 Years Ago")+ggtitle("Inspection Done 2 Years Ago")
+```
+
+
+```{r}
+#Ownership and their Cases
+x=def1 %>% 
+  select(`Ownership Type`) %>% 
+  drop_na() %>% 
+  group_by(`Ownership Type`) %>% 
+  summarise(Count=n())
+
+z=ggplotly(ggplot(x, aes(x=reorder(`Ownership Type`, Count), y=Count, fill=`Ownership Type`))+geom_bar(stat="identity")+coord_flip()+ylab("Cases")+xlab("Ownership Type")+ggtitle("Cases under different Ownership Types")+theme(legend.position="none"), tooltip = c("Count")) %>% 
+    style(hoverlabel= label) %>% 
+    layout(font=font) %>% 
+    config(displayModeBar=F)
+
+api_create(z, "Cases under different Ownership Types")
+
+rm(x,z)
+```
+
+
+
+
+
+
+
+

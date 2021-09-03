@@ -1,0 +1,77 @@
+---
+title: "Assignment 4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(GGally)
+library(plotly)
+```
+
+
+
+
+```{r}
+ny=read_csv("ny_accidents.csv")
+
+ggparcoord(ny, columns = 13:18, groupColumn = 3, showPoints = TRUE , title = "Parallel Coordinate Plot for NY Collisions" , scale= "globalminmax" )#The code here takes a lot of time to compute and show the plot.
+
+
+#The improved solution, in this I have computed the required values before plotting them which takes very less time to execute.
+ny %>% 
+  group_by(BOROUGH) %>% 
+  summarise(`Pedestrians Injured`=sum(`NUMBER OF PEDESTRIANS INJURED`), `Pedestrians Killed`=sum(`NUMBER OF PEDESTRIANS KILLED`), `Cyclists Injured`=sum(`NUMBER OF CYCLIST INJURED`), `Cyclists Killed`=sum(`NUMBER OF CYCLIST KILLED`), `Motorist Injured`=sum(`NUMBER OF MOTORIST INJURED`), `Motorist Killed`=sum(`NUMBER OF MOTORIST KILLED`)) %>% 
+  ggparcoord(columns = 2:7 , groupColumn = 1, showPoints = TRUE, title = "Parallel Coordinate Plot for NY Collisions", scale= "globalminmax", missing = "exclude")
+```
+
+
+
+```{r}
+#########Question 2
+sat=readxl::read_excel("sat.xlsx", skip=1)
+
+ggpairs(sat, columns=4:6, cardinality_threshold = 299)#For the paired correlation between Reading, Writing and Math
+
+
+
+b=pivot_longer(sat, cols=4:6, names_to = "Topic", values_to = "Scores")#Converted the dataset to a long form
+ggplot(b, aes(x=Topic, y=Scores))+geom_boxplot()+ylab("AverageScore")#A boxplot to represent the general stats and theoutliers.
+
+
+
+ggplot(b, aes(x=Scores, fill=Topic))+geom_density(alpha=0.5)+xlab("AverageScore") #A Density Plot to visulaize the data among the scores from different topics.
+```
+
+
+
+```{r}
+########Question 3
+mi=read_excel("Book1.xlsx")
+
+colnames(mi)=c("Median Income", "District Name")
+sam=str_split(mi$`District Name`, "School", simplify = T)#Splitting the data as per the requirement
+sam=as.data.frame(sam)
+mi$`District Name`=sam$V1
+
+mi$`District Name`=str_trim(mi$`District Name`)#Trimming the empty spaces
+
+mi_sat=merge(sat, mi, by="District Name")#Combined the two data frames
+mi_sat$`Median Income`=as.numeric(gsub("[[:punct:]]", '', mi_sat$`Median Income`))#Recreating the Median Income column and COnverting it into numeric data.
+mi_sat$AvgScore=round((mi_sat$Reading+mi_sat$Writing+mi_sat$Math)/3)#Computed the Average SAT scores
+
+
+x=ggplot(data=mi_sat, aes(x=AvgScore, y=`Median Income`, color=`District Name`))+geom_point(stat="identity")+ggtitle("Relation between Avg SAT Scores and Median Income of a household")
+
+ggplotly(x)        
+
+
+```
+
